@@ -27,7 +27,7 @@ export function Hero() {
                     </Typography>
 
                     <Typography variant="body1" sx={{ mb: 3, color: 'text.secondary', maxWidth: '40ch' }}>
-                        cryptoの勉強中です。「生活をより良いものにするもの」、「新しくて楽しいもの」を増やしていきたいです。
+                        ブロックチェーンの勉強中です。「生活をより良いものにするもの」、「新しくて楽しいもの」を増やしていきたいです。
                     </Typography>
 
                     {/* Contact & Platform Links */}
@@ -182,9 +182,8 @@ export function Hero() {
                                     fontSize: '0.95rem'
                                 }
                             }}>
-                                <li>cryptoの社会実装</li>
-                                <li>データ可視化プラットフォーム</li>
-                                <li>生体情報解析</li>
+                                <li>ブロックチェーン</li>
+                                <li>Vision-Language Modelの活用</li>
                             </Box>
                         </Box>
                     </Card>
