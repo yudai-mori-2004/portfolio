@@ -15,23 +15,32 @@ export default function ProjectsPage() {
 
             <Box sx={{ display: "flex", flexDirection: "column", gap: "16px" }}>
                 <ProjectCard
+                    title="RootLens"
+                    description="AIが何でも生成できる時代、本当の価値は「実際にそこにいた人の記録」に宿る。カメラのハードウェア署名（C2PA）で撮影の真正性を証明し、ブロックチェーン上でデジタル資産として所有・取引できるマーケットプレイス。無限に生成される世界において、人間の目撃こそが究極の希少性となる。"
+                    link="https://rootlens.io"
+                    tags={["Blockchain", "C2PA", "Web3"]}
+                />
+
+                <ProjectCard
+                    title="Gogourmet"
+                    description="SNSで流れて消えた「行きたい店」、もう見失わない。YouTubeグルメインフルエンサーが動画で紹介したレストランを、インフルエンサー別に整理してマップで探せるキュレーションサイト。店舗登録を完全自動化するフローを構築し、複数のインフルエンサーの動画から継続的に新店舗を追加中。気になる店をリスト化して、デートや友人との食事プランを簡単に共有できます。"
+                    link="https://gogourmet.jp"
+                    tags={["Next.js", "自動化", "マップ検索"]}
+                />
+
+                <ProjectCard
                     title="CitizenHub"
                     description="CitizenHubは、住民が少額トークンを担保に具体的な政策提案を行い、コミュニティメンバーが民主的に投票して最も支持された提案を採択するSolanaベースのプラットフォームです。投票の結果、多数派には少数派の担保を分配するインセンティブ設計で市民の能動的参加を促進し、代表制民主主義の限界を補完します。"
-
                     link="https://citizen-hub-drab.vercel.app/"
                     tags={["Solana", "DAO", "Web3"]}
                 />
 
-
                 <ProjectCard
                     title="RiceChain"
                     description="Solana上でP2P米流通プラットフォームの構築を目指しています。今回はハッカソンに出すフローを通してクリプトの経験を積む目的が大きいですが、いつか実現したいアイデアです。"
-
                     link="https://ricechain.example.com"
                     tags={["Solana", "Blockchain", "Web3"]}
                 />
-
-
 
                 <ProjectCard
                     title="進捗があればどんどん更新していきます"

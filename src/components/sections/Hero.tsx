@@ -27,7 +27,7 @@ export function Hero() {
                     </Typography>
 
                     <Typography variant="body1" sx={{ mb: 3, color: 'text.secondary', maxWidth: '40ch' }}>
-                        ブロックチェーンの勉強中です。「生活をより良いものにするもの」、「新しくて楽しいもの」を増やしていきたいです。
+                        ものづくりが趣味です。ブロックチェーンを誰でも簡単に使えるようにする仕組みづくりに関心があります。「何かを作りたい」欲を絶やさずに、これからも挑戦を続けていきたいです。
                     </Typography>
 
                     {/* Contact & Platform Links */}
@@ -183,7 +183,8 @@ export function Hero() {
                                 }
                             }}>
                                 <li>ブロックチェーン</li>
-                                <li>Vision-Language Modelの活用</li>
+                                <li>C2PA / コンテンツ証明</li>
+                                <li>WebAssembly</li>
                             </Box>
                         </Box>
                     </Card>
