@@ -15,7 +15,7 @@ import { Card } from '../ui/Card';
 export function Hero() {
     return (
         <Box sx={{ mt: 6, mb: 10 }}>
-            <Grid container spacing={6} alignItems="center">
+            <Grid container spacing={6} alignItems="flex-start">
                 <Grid item xs={12} md={7}>
                     <Typography
                         variant="h3"
@@ -27,7 +27,7 @@ export function Hero() {
                     </Typography>
 
                     <Typography variant="body1" sx={{ mb: 3, color: 'text.secondary', maxWidth: '40ch' }}>
-                        ものづくりが趣味です。ブロックチェーンを誰でも簡単に使えるようにする仕組みづくりに関心があります。「何かを作りたい」欲を絶やさずに、これからも挑戦を続けていきたいです。
+                        ものづくりが趣味です。世の中をより良くする手段として、ブロックチェーンに可能性を感じています。「何かを作りたい」欲を絶やさずに、これからも挑戦を続けていきたいです。
                     </Typography>
 
                     {/* Contact & Platform Links */}
@@ -163,31 +163,97 @@ export function Hero() {
                 </Grid>
 
                 <Grid item xs={12} md={5}>
-                    <Card>
-                        <Box sx={{
-                            p: 4,
-                            backgroundColor: 'rgba(0, 0, 0, 0.02)',
-                            borderRadius: 1,
-                            border: '1px solid rgba(0, 0, 0, 0.05)'
-                        }}>
-                            <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
-                                関心
-                            </Typography>
-
-                            <Box component="ul" sx={{
-                                pl: 2,
-                                '& li': {
-                                    mb: 1.5,
-                                    color: 'text.secondary',
-                                    fontSize: '0.95rem'
-                                }
+                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                        <Card>
+                            <Box sx={{
+                                p: 4,
+                                backgroundColor: 'rgba(0, 0, 0, 0.02)',
+                                borderRadius: 1,
+                                border: '1px solid rgba(0, 0, 0, 0.05)'
                             }}>
-                                <li>ブロックチェーン</li>
-                                <li>C2PA / コンテンツ証明</li>
-                                <li>WebAssembly</li>
+                                <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
+                                    関心
+                                </Typography>
+
+                                <Box component="ul" sx={{
+                                    pl: 2,
+                                    '& li': {
+                                        mb: 1.5,
+                                        color: 'text.secondary',
+                                        fontSize: '0.95rem'
+                                    }
+                                }}>
+                                    <li>ブロックチェーン</li>
+                                    <li>C2PA / コンテンツ証明</li>
+                                    <li>Rust</li>
+                                </Box>
                             </Box>
-                        </Box>
-                    </Card>
+                        </Card>
+
+                        <Card>
+                            <Box sx={{
+                                p: 4,
+                                backgroundColor: 'rgba(0, 0, 0, 0.02)',
+                                borderRadius: 1,
+                                border: '1px solid rgba(0, 0, 0, 0.05)'
+                            }}>
+                                <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
+                                    経歴・実績
+                                </Typography>
+
+                                <Box sx={{
+                                    '& > div': {
+                                        mb: 2.5,
+                                        '&:last-child': {
+                                            mb: 0
+                                        }
+                                    }
+                                }}>
+                                    <Box>
+                                        <Typography variant="subtitle2" sx={{ fontWeight: 600, color: 'text.primary', mb: 0.5 }}>
+                                            学歴
+                                        </Typography>
+                                        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>
+                                            大阪大学 基礎工学部 システム科学科
+                                        </Typography>
+                                        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.85rem' }}>
+                                            4年在学中
+                                        </Typography>
+                                    </Box>
+
+                                    <Box>
+                                        <Typography variant="subtitle2" sx={{ fontWeight: 600, color: 'text.primary', mb: 0.5 }}>
+                                            職務経験
+                                        </Typography>
+                                        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>
+                                            株式会社シーライヴ
+                                        </Typography>
+                                        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.85rem' }}>
+                                            Web開発 (2022/08 - 2024/06)
+                                        </Typography>
+                                    </Box>
+
+                                    <Box>
+                                        <Typography variant="subtitle2" sx={{ fontWeight: 600, color: 'text.primary', mb: 0.5 }}>
+                                            受賞歴
+                                        </Typography>
+                                        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>
+                                            Infinitacity Hackathon
+                                        </Typography>
+                                        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.85rem', mb: 1 }}>
+                                            Governance Track Winner (2025/07)
+                                        </Typography>
+                                        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>
+                                            Solana Student Hackathon
+                                        </Typography>
+                                        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.85rem', fontStyle: 'italic' }}>
+                                            結果発表待ち (2025/11提出)
+                                        </Typography>
+                                    </Box>
+                                </Box>
+                            </Box>
+                        </Card>
+                    </Box>
                 </Grid>
             </Grid>
         </Box>

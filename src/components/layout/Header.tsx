@@ -2,6 +2,7 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import {
     AppBar,
@@ -50,22 +51,34 @@ export default function Header() {
             >
                 <Box sx={{ maxWidth: '1200px', mx: 'auto', width: '100%' }}>
                     <Toolbar sx={{ justifyContent: 'space-between', px: { xs: 0, sm: 0 } }}>
-                        <Typography
-                            variant="h4"
-                            component="div"
-                            sx={{
-                                fontWeight: 'bold',
-                                color: 'text.primary',
-                                transition: 'opacity 0.2s ease',
-                                '&:hover': {
-                                    opacity: 0.8,
-                                }
-                            }}
-                        >
-                            <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                               About me
-                            </Link>
-                        </Typography>
+                        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                            <Box
+                                sx={{
+                                    transition: 'opacity 0.2s ease',
+                                    '&:hover': {
+                                        opacity: 0.8,
+                                    }
+                                }}
+                            >
+                                <Image
+                                    src="/icon.jpg"
+                                    alt="moodai"
+                                    width={48}
+                                    height={48}
+                                    style={{ borderRadius: '50%', objectFit: 'cover' }}
+                                />
+                            </Box>
+                            <Typography
+                                variant="h5"
+                                sx={{
+                                    fontWeight: 'bold',
+                                    color: 'text.primary',
+                                    transition: 'opacity 0.2s ease',
+                                }}
+                            >
+                                Moodai&apos;s Portfolio
+                            </Typography>
+                        </Link>
 
                         {isMobile ? (
                             <>
