@@ -5,10 +5,6 @@ minimalist, performant, and built for the new web.
 
 👉 **[moodai.jp](https://moodai.jp)**
 
----
-
-![preview](./public/preview.png)
-
 <br />
 
 ### Stack
