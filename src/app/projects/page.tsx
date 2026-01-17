@@ -17,7 +17,7 @@ export default function ProjectsPage() {
                 <ProjectCard
                     title="Title Protocol"
                     description="C2PA署名付きコンテンツの権利者をブロックチェーン上で解決するプロトコル。AI生成時代において、デジタルコンテンツの「登記簿」を目指します。不動産に登記簿があるように、コンテンツにも「誰が権利を持つか」を記録し、誰でも確認できる仕組みを構築中。"
-                    link=""
+                    link="https://github.com/yudai-mori-2004/title-protocol"
                     tags={["C2PA", "Solana", "Web3"]}
                     status="coming-soon"
                 />
@@ -25,7 +25,7 @@ export default function ProjectsPage() {
                 <ProjectCard
                     title="RootLens"
                     description="AIが何でも生成できる時代、本当の価値は「実際にそこにいた人の記録」に宿る。カメラのハードウェア署名（C2PA）で撮影の真正性を証明し、ブロックチェーン上でデジタル資産として所有・取引できるマーケットプレイス。無限に生成される世界において、人間の目撃こそが究極の希少性となる。"
-                    link="https://rootlens.io"
+                    link="https://github.com/yudai-mori-2004/root-lens"
                     tags={["Solana", "C2PA", "Web3"]}
                 />
 
@@ -39,7 +39,7 @@ export default function ProjectsPage() {
                 <ProjectCard
                     title="CitizenHub"
                     description="CitizenHubは、住民が少額トークンを担保に具体的な政策提案を行い、コミュニティメンバーが民主的に投票して最も支持された提案を採択するSolanaベースのプラットフォームです。投票の結果、多数派には少数派の担保を分配するインセンティブ設計で市民の能動的参加を促進し、代表制民主主義の限界を補完します。"
-                    link="https://citizen-hub-drab.vercel.app/"
+                    link="https://github.com/yudai-mori-2004/citizen-hub"
                     tags={["Solana", "DAO", "Web3"]}
                 />
             </Box>
