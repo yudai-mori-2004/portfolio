@@ -4,7 +4,6 @@ import Link from 'next/link';
 import {
   Box,
   Typography,
-  Paper,
   Divider,
   Button,
   Chip,
@@ -13,6 +12,7 @@ import {
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { memos } from '@/lib/memos';
+import MemoContent from './MemoContent';
 
 export async function generateStaticParams() {
   return memos.map((memo) => ({
@@ -84,21 +84,7 @@ export default async function MemoPage({params}:{params:Promise<{slug: string}>}
           </Box>
         </Box>
 
-        <Paper
-          elevation={0}
-          sx={{
-            p: { xs: 3, md: 4 },
-            borderRadius: 1,
-            mb: 4,
-            border: '1px solid rgba(0, 0, 0, 0.05)',
-          }}
-        >
-          {memo.paragraphs.map((paragraph,i) => (
-            <Typography key={i} variant="body1" paragraph sx={{ color: 'text.secondary' }}>
-            {paragraph}
-          </Typography>
-          ))}
-        </Paper>
+        <MemoContent paragraphs={memo.paragraphs} />
 
         <Divider sx={{ my: 4 }} />
 
