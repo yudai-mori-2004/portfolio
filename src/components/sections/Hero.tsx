@@ -229,7 +229,7 @@ export function Hero() {
                                             株式会社シーライヴ
                                         </Typography>
                                         <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.85rem' }}>
-                                            Web開発 (2022/08 - 2024/06)
+                                            Web開発 (2023/08 - 2025/06)
                                         </Typography>
                                     </Box>
 
