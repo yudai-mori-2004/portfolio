@@ -14,6 +14,11 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { memos } from '@/lib/memos';
 
+export async function generateStaticParams() {
+  return memos.map((memo) => ({
+    slug: memo.slug,
+  }));
+}
 
 export default async function MemoPage({params}:{params:Promise<{slug: string}>}) {
   const { slug } = await params;
