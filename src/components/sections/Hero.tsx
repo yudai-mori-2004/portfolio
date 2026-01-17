@@ -184,7 +184,7 @@ export function Hero() {
                                     }
                                 }}>
                                     <li>ブロックチェーン</li>
-                                    <li>C2PA / コンテンツ証明</li>
+                                    <li>C2PA / コンテンツ来歴証明</li>
                                     <li>Rust</li>
                                 </Box>
                             </Box>
@@ -238,7 +238,7 @@ export function Hero() {
                                             受賞歴
                                         </Typography>
                                         <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>
-                                            Infinitacity Hackathon
+                                            Crypto Cities Hackathon
                                         </Typography>
                                         <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.85rem', mb: 1 }}>
                                             Governance Track Winner (2025/07)
