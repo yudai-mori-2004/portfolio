@@ -5,7 +5,7 @@ import Layout from '@/components/layout/Layout';
 
 export const metadata = {
   title: 'Yudai Mori | moodai',
-  description: 'ブロックチェーンとC2PA技術で世の中をより良くするプロダクトを作っています。大阪大学基礎工学部システム科学科4年。',
+  description: 'ソフトウェア開発者。AI時代のクリエイター保護インフラを開発中。大阪大学基礎工学部2026年卒。',
   viewport: 'width=device-width, initial-scale=1',
   icons: {
     icon: '/icon.jpg',
@@ -13,14 +13,14 @@ export const metadata = {
   },
   openGraph: {
     title: 'Yudai Mori | moodai',
-    description: 'ブロックチェーンとC2PA技術で世の中をより良くするプロダクトを作っています。',
+    description: 'ソフトウェア開発者。AI時代のクリエイター保護インフラを開発中。',
     images: ['/icon.jpg'],
     type: 'website',
   },
   twitter: {
     card: 'summary',
     title: 'Yudai Mori | moodai',
-    description: 'ブロックチェーンとC2PA技術で世の中をより良くするプロダクトを作っています。',
+    description: 'ソフトウェア開発者。AI時代のクリエイター保護インフラを開発中。',
     images: ['/icon.jpg'],
   },
 };

@@ -16,7 +16,7 @@ export default function ProjectsPage() {
             <Box sx={{ display: "flex", flexDirection: "column", gap: "16px" }}>
                 <ProjectCard
                     title="Title Protocol"
-                    description="C2PA署名付きコンテンツの権利者をブロックチェーン上で解決するプロトコル。AI生成時代において、デジタルコンテンツの「登記簿」を目指します。不動産に登記簿があるように、コンテンツにも「誰が権利を持つか」を記録し、誰でも確認できる仕組みを構築中。"
+                    description="RootLensの開発経験を踏まえ、より汎用的なインフラ基盤として設計中のプロトコル。C2PA署名付きコンテンツの権利者をブロックチェーン上で解決し、デジタルコンテンツの「登記簿」を目指します。不動産に登記簿があるように、コンテンツにも「誰が権利を持つか」を記録し、誰でも確認できる仕組みを構築中。"
                     link="https://github.com/yudai-mori-2004/title-protocol"
                     tags={["C2PA", "Solana", "Web3"]}
                     status="coming-soon"
@@ -24,7 +24,7 @@ export default function ProjectsPage() {
 
                 <ProjectCard
                     title="RootLens"
-                    description="AIが何でも生成できる時代、本当の価値は「実際にそこにいた人の記録」に宿る。カメラのハードウェア署名（C2PA）で撮影の真正性を証明し、ブロックチェーン上でデジタル資産として所有・取引できるマーケットプレイス。無限に生成される世界において、人間の目撃こそが究極の希少性となる。"
+                    description="C2PA署名付き画像の所有権をブロックチェーン上で管理するマーケットプレイス。カメラのハードウェア署名で撮影の真正性を証明し、デジタル資産として所有・取引できる仕組みを実装。このプロジェクトで得た知見をもとにTitle Protocolを設計し、今後Title Protocol上で再構築予定。"
                     link="https://github.com/yudai-mori-2004/root-lens"
                     tags={["Solana", "C2PA", "Web3"]}
                 />

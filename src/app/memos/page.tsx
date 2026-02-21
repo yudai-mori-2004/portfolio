@@ -18,7 +18,7 @@ export default function MemosPage() {
             </div>
 
             <Box sx={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-                {memos.reverse().map((memo) => (
+                {[...memos].reverse().map((memo) => (
                     <MemoCard key={memo.slug} memo={memo} />
                 ))}
             </Box>
