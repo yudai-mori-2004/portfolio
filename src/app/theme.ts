@@ -2,6 +2,13 @@
 'use client';
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
+// アクセントカラー: 琥珀色（真正性・本物の証明を象徴）
+const accentColor = {
+  main: '#C4A035',
+  light: '#D4B55A',
+  dark: '#A68A2A',
+};
+
 // モノクロ基調でシンプルでスタイリッシュなテーマを作成
 const theme = createTheme({
   palette: {
@@ -17,6 +24,11 @@ const theme = createTheme({
       light: '#999999',
       dark: '#444444',
       contrastText: '#ffffff',
+    },
+    warning: {
+      main: accentColor.main,
+      light: accentColor.light,
+      dark: accentColor.dark,
     },
     background: {
       default: '#f8f8f8', // ほぼ白のバックグラウンド
@@ -61,14 +73,22 @@ const theme = createTheme({
     borderRadius: 8, // 角の丸みを減らす
   },
   components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          boxShadow: 'none',
+        },
+      },
+    },
     MuiCard: {
       styleOverrides: {
         root: {
-          boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)',
+          boxShadow: 'none',
+          border: '1px solid rgba(0, 0, 0, 0.08)',
           transition: 'all 0.2s ease',
           '&:hover': {
             transform: 'translateY(-2px)',
-            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1)',
+            borderColor: 'rgba(0, 0, 0, 0.15)',
           },
         },
       },
@@ -76,7 +96,7 @@ const theme = createTheme({
     MuiPaper: {
       styleOverrides: {
         root: {
-          boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)',
+          boxShadow: 'none',
         },
       },
     },
@@ -92,9 +112,9 @@ const theme = createTheme({
           },
         },
         containedPrimary: {
-          boxShadow: '0 1px 2px rgba(0, 0, 0, 0.1)',
+          boxShadow: 'none',
           '&:hover': {
-            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.15)',
+            boxShadow: 'none',
           },
         },
       },
@@ -106,7 +126,7 @@ const theme = createTheme({
           color: '#333333',
           transition: 'color 0.2s ease',
           '&:hover': {
-            color: '#111111',
+            color: accentColor.main,
           },
         },
       },
@@ -116,6 +136,9 @@ const theme = createTheme({
         root: {
           borderRadius: 4,
           fontWeight: 500,
+          backgroundColor: 'rgba(196, 160, 53, 0.15)',
+          color: '#8B7024',
+          border: '1px solid rgba(196, 160, 53, 0.3)',
         },
       },
     },
@@ -143,6 +166,11 @@ const darkTheme = createTheme({
       dark: '#909090',
       contrastText: '#111111',
     },
+    warning: {
+      main: accentColor.light, // ダークモードでは明るめの琥珀色
+      light: '#E5C97A',
+      dark: accentColor.main,
+    },
     background: {
       default: '#121212', // ダークバックグラウンド
       paper: '#1a1a1a',
@@ -152,6 +180,44 @@ const darkTheme = createTheme({
       secondary: '#b0b0b0',
     },
     divider: 'rgba(255, 255, 255, 0.08)',
+  },
+  components: {
+    ...responsiveTheme.components,
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          boxShadow: 'none',
+          border: '1px solid rgba(255, 255, 255, 0.08)',
+          transition: 'all 0.2s ease',
+          '&:hover': {
+            transform: 'translateY(-2px)',
+            borderColor: 'rgba(255, 255, 255, 0.15)',
+          },
+        },
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          borderRadius: 4,
+          fontWeight: 500,
+          backgroundColor: 'rgba(255, 255, 255, 0.08)',
+          color: '#e0e0e0',
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          textDecoration: 'none',
+          color: '#e0e0e0',
+          transition: 'color 0.2s ease',
+          '&:hover': {
+            color: accentColor.light,
+          },
+        },
+      },
+    },
   },
 });
 

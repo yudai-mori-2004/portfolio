@@ -54,7 +54,7 @@ export function MemoCard({ memo }: MemoCardProps) {
                             color: 'text.primary',
                             transition: 'color 0.2s ease',
                             '&:hover': {
-                                color: 'primary.main',
+                                color: 'warning.main',
                             }
                         }}
                     >

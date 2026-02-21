@@ -2,7 +2,6 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import {
     AppBar,
@@ -46,37 +45,24 @@ export default function Header() {
                 elevation={0}
                 sx={{
                     backgroundColor: 'transparent',
-                    borderBottom: 'none',
+                    boxShadow: 'none',
                 }}
             >
                 <Box sx={{ maxWidth: '1200px', mx: 'auto', width: '100%' }}>
                     <Toolbar sx={{ justifyContent: 'space-between', px: { xs: 0, sm: 0 } }}>
-                        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '12px' }}>
-                            <Box
-                                sx={{
-                                    transition: 'opacity 0.2s ease',
-                                    '&:hover': {
-                                        opacity: 0.8,
-                                    }
-                                }}
-                            >
-                                <Image
-                                    src="/icon.jpg"
-                                    alt="moodai"
-                                    width={48}
-                                    height={48}
-                                    style={{ borderRadius: '50%', objectFit: 'cover' }}
-                                />
-                            </Box>
+                        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
                             <Typography
                                 variant="h5"
                                 sx={{
                                     fontWeight: 'bold',
                                     color: 'text.primary',
                                     transition: 'opacity 0.2s ease',
+                                    '&:hover': {
+                                        opacity: 0.8,
+                                    }
                                 }}
                             >
-                                Moodai&apos;s Portfolio
+                                moodai
                             </Typography>
                         </Link>
 
@@ -141,7 +127,7 @@ export default function Header() {
                                                 left: '50%',
                                                 width: isActive(link.path) ? '20px' : '0px',
                                                 height: '2px',
-                                                backgroundColor: 'text.primary',
+                                                backgroundColor: 'warning.main',
                                                 transition: 'all 0.2s ease',
                                                 transform: 'translateX(-50%)',
                                             },
@@ -162,12 +148,6 @@ export default function Header() {
                     </Toolbar>
                 </Box>
             </AppBar>
-            <Box sx={{
-                height: '1px',
-                width: '100%',
-                background: 'rgba(0, 0, 0, 0.08)',
-                mt: 1,
-            }} />
         </Box>
     );
 }

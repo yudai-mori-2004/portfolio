@@ -3,6 +3,7 @@
 // components/sections/Hero.tsx
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Box, Typography, Button, Grid, IconButton, Tooltip } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import TwitterIcon from '@mui/icons-material/Twitter'; // ここを修正 - x から Twitter に変更
@@ -10,6 +11,7 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import DescriptionIcon from '@mui/icons-material/Description';
+import EmailIcon from '@mui/icons-material/Email';
 import { Card } from '../ui/Card';
 
 export function Hero() {
@@ -17,17 +19,37 @@ export function Hero() {
         <Box sx={{ mt: 6, mb: 10 }}>
             <Grid container spacing={6} alignItems="flex-start">
                 <Grid item xs={12} md={7}>
-                    <Typography
-                        variant="h3"
-                        component="h1"
-                        fontWeight="bold"
-                        sx={{ mb: 2 }}
-                    >
-                        Yudai Mori
-                    </Typography>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 3, mb: 2 }}>
+                        <Box
+                            sx={{
+                                width: 100,
+                                height: 100,
+                                borderRadius: '50%',
+                                overflow: 'hidden',
+                                flexShrink: 0,
+                                border: '3px solid',
+                                borderColor: 'divider',
+                            }}
+                        >
+                            <Image
+                                src="/profile.png"
+                                alt="Yudai Mori"
+                                width={100}
+                                height={100}
+                                style={{ objectFit: 'cover' }}
+                            />
+                        </Box>
+                        <Typography
+                            variant="h3"
+                            component="h1"
+                            fontWeight="bold"
+                        >
+                            Yudai Mori
+                        </Typography>
+                    </Box>
 
-                    <Typography variant="body1" sx={{ mb: 3, color: 'text.secondary', maxWidth: '40ch' }}>
-                        ものづくりが趣味です。世の中をより良くする手段として、ブロックチェーンに可能性を感じています。「何かを作りたい」欲を絶やさずに、これからも挑戦を続けていきたいです。
+                    <Typography variant="body1" sx={{ mb: 3, color: 'text.secondary', maxWidth: '50ch' }}>
+                        幼少期からものづくりが好きで、大学卒業を機に起業しました。今取り組んでいるのは、AI時代における人間の創作活動を守るインフラです。AIは人間の創作物なしには成り立たない——にもかかわらず、AI生成と人間の作品が同じ土俵で評価され、クリエイターが報われない現状があります。この構造的矛盾を、技術で解決したいと考えています。
                     </Typography>
 
                     {/* Contact & Platform Links */}
@@ -41,9 +63,9 @@ export function Hero() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     size="small" 
-                                    sx={{ 
+                                    sx={{
                                         color: 'text.secondary',
-                                        '&:hover': { color: 'primary.main' }
+                                        '&:hover': { color: 'warning.main' }
                                     }}
                                 >
                                     <TwitterIcon fontSize="small" />
@@ -56,9 +78,9 @@ export function Hero() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     size="small" 
-                                    sx={{ 
+                                    sx={{
                                         color: 'text.secondary',
-                                        '&:hover': { color: 'primary.main' }
+                                        '&:hover': { color: 'warning.main' }
                                     }}
                                 >
                                     <TelegramIcon fontSize="small" />
@@ -76,11 +98,11 @@ export function Hero() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     variant="body2"
-                                    sx={{ 
-                                        color: 'text.secondary', 
+                                    sx={{
+                                        color: 'text.secondary',
                                         textDecoration: 'none',
-                                        '&:hover': { 
-                                            color: 'primary.main',
+                                        '&:hover': {
+                                            color: 'warning.main',
                                             textDecoration: 'underline'
                                         }
                                     }}
@@ -96,11 +118,11 @@ export function Hero() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     variant="body2"
-                                    sx={{ 
-                                        color: 'text.secondary', 
+                                    sx={{
+                                        color: 'text.secondary',
                                         textDecoration: 'none',
-                                        '&:hover': { 
-                                            color: 'primary.main',
+                                        '&:hover': {
+                                            color: 'warning.main',
                                             textDecoration: 'underline'
                                         }
                                     }}
@@ -110,22 +132,40 @@ export function Hero() {
                             </Box>
                             <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                 <DescriptionIcon fontSize="small" sx={{ color: 'text.secondary', mr: 1.5 }} />
-                                <Typography 
+                                <Typography
                                     component="a"
                                     href="https://note.com/moodai0119"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     variant="body2"
-                                    sx={{ 
-                                        color: 'text.secondary', 
+                                    sx={{
+                                        color: 'text.secondary',
                                         textDecoration: 'none',
-                                        '&:hover': { 
-                                            color: 'primary.main',
+                                        '&:hover': {
+                                            color: 'warning.main',
                                             textDecoration: 'underline'
                                         }
                                     }}
                                 >
                                     Note
+                                </Typography>
+                            </Box>
+                            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                <EmailIcon fontSize="small" sx={{ color: 'text.secondary', mr: 1.5 }} />
+                                <Typography
+                                    component="a"
+                                    href="mailto:yudai.mori@moodai.jp"
+                                    variant="body2"
+                                    sx={{
+                                        color: 'text.secondary',
+                                        textDecoration: 'none',
+                                        '&:hover': {
+                                            color: 'warning.main',
+                                            textDecoration: 'underline'
+                                        }
+                                    }}
+                                >
+                                    yudai.mori@moodai.jp
                                 </Typography>
                             </Box>
                         </Box>
@@ -136,12 +176,17 @@ export function Hero() {
                             component={Link}
                             href="/projects"
                             variant="contained"
-                            color="primary"
+                            color="warning"
                             endIcon={<ArrowForwardIcon />}
                             sx={{
                                 px: 3,
                                 py: 1.5,
                                 borderRadius: 1,
+                                color: '#111',
+                                fontWeight: 600,
+                                '&:hover': {
+                                    transform: 'translateY(-2px)',
+                                },
                             }}
                         >
                             プロジェクト一覧
@@ -167,9 +212,8 @@ export function Hero() {
                         <Card>
                             <Box sx={{
                                 p: 4,
-                                backgroundColor: 'rgba(0, 0, 0, 0.02)',
+                                backgroundColor: 'action.hover',
                                 borderRadius: 1,
-                                border: '1px solid rgba(0, 0, 0, 0.05)'
                             }}>
                                 <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
                                     関心
@@ -183,9 +227,9 @@ export function Hero() {
                                         fontSize: '0.95rem'
                                     }
                                 }}>
-                                    <li>ブロックチェーン</li>
                                     <li>C2PA / コンテンツ来歴証明</li>
-                                    <li>Rust</li>
+                                    <li>Blockchain (Solana, RWAs)</li>
+                                    <li>暗号技術 (ZK, TEE)</li>
                                 </Box>
                             </Box>
                         </Card>
@@ -193,9 +237,47 @@ export function Hero() {
                         <Card>
                             <Box sx={{
                                 p: 4,
-                                backgroundColor: 'rgba(0, 0, 0, 0.02)',
+                                backgroundColor: 'action.hover',
                                 borderRadius: 1,
-                                border: '1px solid rgba(0, 0, 0, 0.05)'
+                            }}>
+                                <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
+                                    技術スタック
+                                </Typography>
+
+                                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+                                    <Box>
+                                        <Typography variant="subtitle2" sx={{ fontWeight: 600, color: 'text.primary', mb: 0.5 }}>
+                                            言語
+                                        </Typography>
+                                        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>
+                                            TypeScript, Rust, Python, C#
+                                        </Typography>
+                                    </Box>
+                                    <Box>
+                                        <Typography variant="subtitle2" sx={{ fontWeight: 600, color: 'text.primary', mb: 0.5 }}>
+                                            フレームワーク
+                                        </Typography>
+                                        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>
+                                            Next.js, React, Solana/Anchor
+                                        </Typography>
+                                    </Box>
+                                    <Box>
+                                        <Typography variant="subtitle2" sx={{ fontWeight: 600, color: 'text.primary', mb: 0.5 }}>
+                                            その他
+                                        </Typography>
+                                        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>
+                                            C2PA, Docker, PostgreSQL
+                                        </Typography>
+                                    </Box>
+                                </Box>
+                            </Box>
+                        </Card>
+
+                        <Card>
+                            <Box sx={{
+                                p: 4,
+                                backgroundColor: 'action.hover',
+                                borderRadius: 1,
                             }}>
                                 <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
                                     経歴・実績
@@ -217,13 +299,19 @@ export function Hero() {
                                             大阪大学 基礎工学部 システム科学科
                                         </Typography>
                                         <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.85rem' }}>
-                                            4年在学中
+                                            2026年3月卒業予定
                                         </Typography>
                                     </Box>
 
                                     <Box>
                                         <Typography variant="subtitle2" sx={{ fontWeight: 600, color: 'text.primary', mb: 0.5 }}>
-                                            職務経験
+                                            職歴
+                                        </Typography>
+                                        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>
+                                            moodai（個人事業主）
+                                        </Typography>
+                                        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.85rem', mb: 1 }}>
+                                            Webサービス開発・受託開発 (2026/02 -)
                                         </Typography>
                                         <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>
                                             株式会社シーライヴ
@@ -241,13 +329,13 @@ export function Hero() {
                                             Crypto Cities Hackathon
                                         </Typography>
                                         <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.85rem', mb: 1 }}>
-                                            Governance Track Winner (2025/07)
+                                            Governance Track Winner (2025)
                                         </Typography>
                                         <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.9rem' }}>
-                                            Solana Student Hackathon
+                                            Odyssey of the Mind 世界大会
                                         </Typography>
-                                        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.85rem', fontStyle: 'italic' }}>
-                                            結果発表待ち (2025/11提出)
+                                        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.85rem' }}>
+                                            Vehicle部門 Division2 銅メダル (2017)
                                         </Typography>
                                     </Box>
                                 </Box>
